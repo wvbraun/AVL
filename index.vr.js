@@ -6,12 +6,13 @@ import {
   Pano,
   Text,
   View,
+  Model,
+  AmbientLight,
 } from 'react-vr';
 
 const viewStyle = {
   flex: 1,
   flexDirection: 'column',
-//  backgroundColor: 'red',
   width: 2,
   alignItems: 'stretch',
 //  transform: [{translate: [-1, 1, -5]}],
@@ -40,19 +41,21 @@ const spacePano = {
   ]
 };
 
+const earth = {
+  obj: asset('planet-earth/earth.obj'),
+  mtl: asset('planet-earth/earth.mtl'),
+};
+
 export default class AVL extends React.Component {
   render() {
-  /*
-  <View style={viewStyle}>
-          <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'red'}}>
-            <Text style={{fontSize: 0.2, textAlign: 'center'}}>Red</Text>
-          </View>
-        </View>
-  */
     return (
       <View>
         <Pano source={spacePano} />
-        <Text style={textStyle}>AVL</Text>
+        <Text style={textStyle}>
+          COPE SUX
+        </Text>
+        <AmbientLight intensity={ 2.6 }  />
+        <Model source={earth} lit={true} />
       </View>
     );
   }

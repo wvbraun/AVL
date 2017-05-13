@@ -9,7 +9,12 @@ import {
 } from 'react-vr';
 
 const viewStyle = {
-  backgroundColor: 'red',
+  flex: 1,
+  flexDirection: 'column',
+//  backgroundColor: 'red',
+  width: 2,
+  alignItems: 'stretch',
+  transform: [{translate: [-1, 1, -5]}],
 };
 
 const textStyle = {
@@ -26,12 +31,15 @@ const textStyle = {
 
 export default class AVL extends React.Component {
   render() {
+    // <Pano source={asset('chess-world.jpg')}/>
     return (
-      <View style={viewStyle}>
-        <Pano source={asset('chess-world.jpg')}/>
-        <Text style={textStyle}>
-          AVL
-        </Text>
+      <View style={{backgroundColor: 'black'}}>
+        <Text>AVL</Text>
+        <View style={viewStyle}>
+          <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'red'}}>
+            <Text style={{fontSize: 0.2, textAlign: 'center'}}>Red</Text>
+          </View>
+        </View>
       </View>
     );
   }

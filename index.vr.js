@@ -30,7 +30,7 @@ export default class AVL extends React.Component {
       <View style={viewStyle}>
         <Pano source={asset('chess-world.jpg')}/>
         <Text style={textStyle}>
-          Hi
+          AVL
         </Text>
       </View>
     );

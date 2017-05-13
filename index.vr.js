@@ -31,10 +31,10 @@ const textStyle = {
 
 export default class AVL extends React.Component {
   render() {
-    // <Pano source={asset('chess-world.jpg')}/>
     return (
       <View style={{backgroundColor: 'black'}}>
-        <Text>AVL</Text>
+        <Pano source={asset('chess-world.jpg')}/>
+        <Text style={textStyle}>AVL</Text>
         <View style={viewStyle}>
           <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'red'}}>
             <Text style={{fontSize: 0.2, textAlign: 'center'}}>Red</Text>

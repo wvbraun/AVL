@@ -19,10 +19,10 @@ const viewStyle = {
 };
 
 const textStyle = {
-  backgroundColor: 'black', //'#777879',
+  fontColor: 'blue', //'#777879',
   fontSize: 0.8,
   fontWeight: '400',
-  layoutOrigin: [0.5, 0.5],
+  //layoutOrigin: [0.5, 0.5],
   paddingLeft: 0.2,
   paddingRight: 0.2,
   textAlign: 'center',
@@ -52,7 +52,7 @@ export default class AVL extends React.Component {
       <View>
         <Pano source={spacePano} />
         <Text style={textStyle}>
-          COPE SUX
+          RUN IT
         </Text>
         <AmbientLight intensity={ 2.6 }  />
         <Model source={earth} lit={true} />

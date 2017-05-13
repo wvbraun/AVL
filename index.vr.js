@@ -29,6 +29,17 @@ const textStyle = {
   transform: [{translate: [0, 0, -3]}],
 };
 
+const spacePano = {
+  uri: [
+    '../static_assets/stars/fuzzy_stars_right1.png',
+    '../static_assets/stars/fuzzy_stars_left2.png',
+    '../static_assets/stars/fuzzy_stars_top3.png',
+    '../static_assets/stars/fuzzy_stars_bottom4.png',
+    '../static_assets/stars/fuzzy_stars_back6.png',
+    '../static_assets/stars/fuzzy_stars_front5.png',
+  ]
+};
+
 export default class AVL extends React.Component {
   render() {
   /*
@@ -39,8 +50,8 @@ export default class AVL extends React.Component {
         </View>
   */
     return (
-      <View style={{backgroundColor: 'black'}}>
-        <Pano source={asset('brick-room.jpg')}/>
+      <View>
+        <Pano source={spacePano} />
         <Text style={textStyle}>AVL</Text>
       </View>
     );
